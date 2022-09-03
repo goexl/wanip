@@ -23,9 +23,13 @@ func NewAgent(opts ...option) (agent *Agent, err error) {
 	}
 	if nil == agent.options.logger {
 		agent.logger, err = simaqian.New()
+	} else {
+		agent.logger = agent.options.logger
 	}
 	if nil == agent.options.client {
 		agent.client = resty.New()
+	} else {
+		agent.client = agent.options.client
 	}
 
 	return
@@ -39,7 +43,7 @@ func (a *Agent) Get(opts ...getOption) (ip string, err error) {
 
 	switch _options.mode {
 	case modeIpv4:
-		ip, err = a.options.provider.ipv4.ipv4(a.options.client)
+		ip, err = a.options.provider.ipv4.ipv4(a.client)
 	}
 
 	return
