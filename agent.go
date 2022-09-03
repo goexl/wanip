@@ -5,7 +5,7 @@ import (
 	"github.com/goexl/simaqian"
 )
 
-var _ = NewAgent
+var _ = New
 
 // Agent 执行机器人
 type Agent struct {
@@ -14,8 +14,8 @@ type Agent struct {
 	options *options
 }
 
-// NewAgent 创建执行机器人
-func NewAgent(opts ...option) (agent *Agent, err error) {
+// New 创建执行机器人
+func New(opts ...option) (agent *Agent, err error) {
 	agent = new(Agent)
 	agent.options = defaultOptions()
 	for _, opt := range opts {
