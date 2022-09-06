@@ -5,11 +5,11 @@ go 1.18
 require (
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/goexl/exc v0.0.4
+	github.com/goexl/gox v0.0.9
 	github.com/goexl/simaqian v0.1.3
 )
 
 require (
-	github.com/goexl/gox v0.0.9 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
