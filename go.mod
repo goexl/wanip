@@ -6,7 +6,7 @@ toolchain go1.24.1
 require (
 	github.com/go-resty/resty/v2 v2.16.5
 	github.com/goexl/exc v0.0.5
-	github.com/goexl/gox v0.3.8
+	github.com/goexl/gox v1.9.2
 	github.com/goexl/simaqian v0.4.0
 )
 
